@@ -21,6 +21,8 @@ const UserById = (props) => {
     <div className='container my-5'>
       <h1>{user.name}</h1>
       <p>{user.username}</p>
+      <p>{user.email}</p>
+      <p>{user.phone}</p>
       <Link to='/users' className='btn btn-primary'>
         Go Back
       </Link>

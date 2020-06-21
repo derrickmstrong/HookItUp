@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
     return (
-        <div className="container my-5">
+        <div className="d-flex justify-content-center my-5">
             <h1>Welcome to React Hooks</h1>
         </div>
     )
