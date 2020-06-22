@@ -15,14 +15,21 @@ const UserById = (props) => {
   useEffect(() => {
     getUserById();
     return () => {};
-  }, []);
+  }, []);  
 
   return (
     <div className='container my-5'>
       <h1>{user.name}</h1>
       <p>{user.username}</p>
       <p>{user.email}</p>
-      <p>{user.phone}</p>
+      <p>{user.phone}</p> 
+      {/* In order to access an object inside a JSON object mimic the following... wrap state AND state.object_name then access to the properties inside of the object - see below */}
+      {user && user.address && (
+        <p>
+          {user.address.street} {user.address.suite}, <br />
+          {user.address.city} {user.address.zipcode}
+        </p>
+      )}
       <Link to='/users' className='btn btn-primary'>
         Go Back
       </Link>

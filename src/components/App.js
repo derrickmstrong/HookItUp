@@ -10,7 +10,6 @@ const App = () => {
   return (
     <div>
       <Router>
-
         <div className='d-flex justify-content-center mx-3'>
           <Link to='/' className='btn btn-primary m-4'>
             Home
@@ -22,10 +21,8 @@ const App = () => {
             Users
           </Link>
         </div>
-
         <Switch>
           <Route exact path='/' component={Home} />
-
           <Route exact path='/posts' component={Post} />
           <Route path='/posts/:id/details' component={PostById} />
           <Route exact path='/users' component={Users} />
