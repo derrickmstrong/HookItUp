@@ -19,6 +19,12 @@ const Users = () => {
     return (
       <div key={user.id} className='container my-5'>
         <h1>{user.name}</h1>
+        {user.address && (
+          <p>
+            {user.address.street} {user.address.suite}, <br />
+            {user.address.city} {user.address.zipcode}
+          </p>
+        )}
         <Link to={`/users/${user.id}/details`} className='btn btn-primary'>
           See more
         </Link>
